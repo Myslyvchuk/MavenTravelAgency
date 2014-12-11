@@ -76,7 +76,6 @@
 	<build>
 		<pluginManagement>
 			<plugins>
-
 				<plugin>
 					<groupId>org.apache.tomcat.maven</groupId>
 					<artifactId>tomcat7-maven-plugin</artifactId>
@@ -87,6 +86,13 @@
 						<url>http:// localhost:8080/manager/text</url>
 						<username>tomcat</username>
 						<password>tomcatuser</password>
+						<archive>
+							<manifest>
+								<addClasspath>true</addClasspath>
+								<classpathPrefix>lib/</classpathPrefix>
+								<mainClass>com.softserve.edu.ita.app.App</mainClass>
+							</manifest>
+						</archive>
 					</configuration>
 				</plugin>
 			</plugins>
